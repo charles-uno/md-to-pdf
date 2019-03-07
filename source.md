@@ -2,6 +2,9 @@
 title: "Step Up with Markdown"
 author: Charles McEachern
 date: \today
+#linkcolor: blue
+#urlcolor: green
+#filecolor: red
 # classoption: twocolumn # Uncomment for two columns
 # geometry: margin=1in # Uncomment for normal-ish margins
 ---
