@@ -1,10 +1,8 @@
 ---
 title: "Step Up with Markdown"
-author: Charles McEachern
+author: Charles Fyfe
 date: \today
-#linkcolor: blue
-#urlcolor: green
-#filecolor: red
+urlcolor: red
 # classoption: twocolumn # Uncomment for two columns
 # geometry: margin=1in # Uncomment for normal-ish margins
 ---
@@ -116,15 +114,6 @@ Also -- and maybe this is just me -- I want something that lets my documents pla
 As the industry-standard tool, almost by definition, its defaults look average.
 
 
-
-
-
-
-
-
-
-
-
 Under-the-hood html gives it plenty of horsepower
 
 
@@ -134,7 +123,7 @@ The thing is, I don't want to deal with nested menus, style options, invisible f
 
 
 
-https://xkcd.com/2109/
+[https://xkcd.com/2109/](https://xkcd.com/2109/)
 
 
 

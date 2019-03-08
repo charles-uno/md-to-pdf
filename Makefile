@@ -1,33 +1,23 @@
 
-IMAGE := pdf-build-image
+IMAGE := pandoc-image
 SOURCE := source.md
 MOUNT := /workspace
 
-DOCKERFILE := Dockerfile.ubuntu
-
-.PHONY: all clean helper refresh
+.PHONY: all clean helper
 
 all: helper
 
 helper: container $(SOURCE)
 	docker run --rm --mount type=bind,source=$(PWD),target=$(MOUNT) -w $(MOUNT) $(IMAGE) make out.pdf
 
-container: $(DOCKERFILE)
-	docker build . -f $(DOCKERFILE) -t $(IMAGE)
+container: Dockerfile
+	docker build . -f Dockerfile -t $(IMAGE)
 
-refresh: $(DOCKERFILE)
-	docker build . -f $(DOCKERFILE) -t $(IMAGE) --no-cache
+refresh: Dockerfile
+	docker build . -f Dockerfile -t $(IMAGE) --no-cache
 
 out.pdf: $(SOURCE)
 	pandoc $(SOURCE) -o out.pdf --verbose --variable urlcolor=red
 
 clean:
 	rm -f *.pdf
-
-debug:
-	docker run --rm --mount type=bind,source=$(PWD),target=$(MOUNT) -w $(MOUNT) $(IMAGE) make debug-helper
-
-debug-helper:
-	pandoc test.md -o out.pdf --verbose
-
-#	cat ~/.pandoc/templates/default.latex
