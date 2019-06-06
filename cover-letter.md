@@ -6,12 +6,9 @@ date: \today
 
 Three years ago, I left academia for software engineering. Full-time research wasn't a good fit, and neither was the prospect of moving to chase faculty positions. But I missed teaching immediately. 
 
-Since then, I've pursued mentorship and outreach at every opportunity. This is my third summer mentoring an intern. I've presented hour-long tech forums to introduce hundreds of my peers to new technologies. Over the winter I spent my Saturdays volunteer-coaching a Special Olympics powerlifting team. This has all left me hungry for more, which is why I'm applying to teach at St Olaf. 
+Since then, I've pursued education and outreach at every opportunity. This is my third summer mentoring an intern. I've presented hour-long tech forums to introduce hundreds of my peers to new technologies. Over the winter I spent my Saturdays volunteer-coaching a Special Olympics powerlifting team. This has all left me hungry for more, which is why I'm applying to teach at St Olaf. 
 
 I'd also like to believe my application is not entirely selfish. At least a third of my St Olaf physics class ended up writing software. Many of today's physics majors will too. 
-
-
-
 
 
 
