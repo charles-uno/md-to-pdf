@@ -14,17 +14,13 @@ One way or another, at least a third of my St Olaf physics class ended up develo
 Tomorrow's physics majors
 
 
+I do DevOps -- eliminating tedious and error-prone tasks via automation. Others work on machine learning, web development, microcontrollers, and so on.
 
 
-
-. I do DevOps -- eliminating tedious and error-prone tasks via automation. Others work on machine learning, web development, microcontrollers, and so on.
-
-
-
-
-best of both worlds
 
 Tomorrow's physics majors will do the same.
+
+
 
 
 I'm looking to put tech on the back burner because I miss teaching
