@@ -11,6 +11,12 @@ I hope I can stir up some excitement on your end as well. My unusual career path
 
 
 
+uncertainty about where you want to be in five years
+
+
+
+
+
 Cray's last corporate re-org gave me plenty of experience to share
 
 
