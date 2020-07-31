@@ -1,23 +1,24 @@
+IMG := pandoc-image
+MNT := /workspace
 
-IMAGE := pandoc-image
-SOURCE := source.md
-MOUNT := /workspace
+.PHONY: all help refresh
 
-.PHONY: all clean helper
+INPUTS := $(wildcard src/*.md)
+NAMES := $(patsubst src/%.md,%,$(INPUTS))
 
-all: helper
+# LaTeX often moves figures to place text more efficiently. Turn that off.
+PANDOC_FLAGS := -f markdown-implicit_figures --verbose --variable urlcolor=red
 
-helper: container $(SOURCE)
-	docker run --rm --mount type=bind,source=$(PWD),target=$(MOUNT) -w $(MOUNT) $(IMAGE) make out.pdf
+all: help
+
+help:
+	@echo choices: $(NAMES)
+
+%: src/%.md
+	docker run --rm -v $(PWD):$(MNT) -w $(MNT) $(IMG) pandoc  $< -o out/$@.pdf $(PANDOC_FLAGS)
 
 container: Dockerfile
-	docker build . -f Dockerfile -t $(IMAGE)
+	docker build . -f Dockerfile -t $(IMG)
 
 refresh: Dockerfile
-	docker build . -f Dockerfile -t $(IMAGE) --no-cache
-
-out.pdf: $(SOURCE)
-	pandoc $(SOURCE) -o out.pdf --verbose --variable urlcolor=red
-
-clean:
-	rm -f *.pdf
+	docker build . -f Dockerfile -t $(IMG) --no-cache
